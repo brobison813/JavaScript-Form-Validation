@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="project4.css">
+<title>HLML-Basics</title>
+</head>
+
+<body>
+<h1>Brian Robison & Co. - Customer Information</h1><br><br><br><br>
+<form name="infoForm"  onsubmit="return validateForm()" method="post">
+<label for="fname">First Name:</label><br>
+<input type="text" id="fname" name="fname"><br>
+<label for="lname">Last Name:</label><br>
+<input type="text" id="lname" name="lname"><br>
+<label for="email">Email Address:</label><br>
+<input type="text" id="email" name="email"><br><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+<script>
+function validateForm(){
+	var x = document.forms["infoForm"]["fname"].value;
+	if (x == ""){
+		alert("First name must not be left blank");
+		return false;
+	}
+	var y = document.forms["infoForm"]["lname"].value;
+	if (y == ""){
+		alert("Last name must not be left blank");
+		return false;
+	}
+		var z = document.forms["infoForm"]["email"].value;
+	if (z == ""){
+		alert("Email must not be left blank");
+		return false;
+	}
+	
+}
+</script>
+
+<footer>
+<p> Author: Brian Robison<br>
+<a href="mailto:Brobison@usf.edu">Brobison@usf.edu<a/></p>
+</footer>
+</html>
